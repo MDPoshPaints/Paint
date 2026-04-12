@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryland Posh Paints | Interior Design & Color Consultation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --md-blue: #002d5a;
+            --md-gold: #d4af37;
+            --dark: #1a1a1a;
+            --white: #ffffff;
+            --soft-gray: #f4f4f4;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--md-blue);
+            color: var(--white);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            border-bottom: 5px solid var(--md-gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo { color: var(--md-blue); font-size: 1.4rem; font-weight: 700; text-transform: uppercase; }
+        .logo span { color: var(--md-gold); }
+
+        .btn-reserve {
+            background: var(--md-blue);
+            color: var(--white);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-reserve:hover { background: var(--md-gold); color: var(--md-blue); }
+
+        .hero { padding: 60px 5%; max-width: 1200px; margin: 0 auto; }
+
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 10px; }
+        .tagline { color: var(--md-gold); font-size: 1.2rem; margin-bottom: 40px; }
+
+        .showcase-card {
+            display: inline-block;
+            background: var(--white);
+            border: 10px solid var(--md-gold);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            max-width: 300px; 
+            width: 100%;
+        }
+
+        .img-container {
+            width: 100%;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-img { display: block; width: 100%; height: auto; }
+
+        .booking-panel {
+            background: var(--white);
+            color: var(--dark);
+            padding: 20px;
+            text-align: left;
+            border-top: 5px solid var(--md-gold);
+        }
+
+        .contact-row p { margin: 5px 0; font-weight: 500; font-size: 0.8rem; }
+        .contact-row strong { color: var(--md-blue); }
+
+        .portal-box {
+            background: var(--soft-gray);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px dashed #ccc;
+            margin-top: 10px;
+        }
+
+        .paypal-btn {
+            display: inline-block;
+            background: #0070ba;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 60px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 8px;
+            border-bottom: 3px solid var(--md-gold);
+        }
+
+        .card h3 { color: var(--md-gold); margin-bottom: 15px; text-transform: uppercase; font-size: 1.1rem; }
+
+        footer { text-align: center; padding: 40px; opacity: 0.6; font-size: 0.8rem; }
+
+        @media (max-width: 600px) { h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Maryland <span>Posh Paints</span></div>
+            <a href="https://www.paypal.com/ncp/payment/7C63RAGKBT7WW" class="btn-reserve">RESERVATION REQUEST</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Design Excellence & <br>Color Consultation</h1>
+            <p class="tagline">Defining aesthetic direction for Maryland’s finest interiors.</p>
+            
+            <div class="showcase-card">
+                <div class="img-container">
+                    <img src="MPP.jpg" alt="Maryland Posh Paints Design" class="main-img">
+                </div>
+                
+                <div class="booking-panel">
+                    <div class="contact-row">
+                        <p><strong>Direct:</strong> (410) 317-3987</p>
+                        <p><strong>Email:</strong> mdposhpaints@aol.com</p>
+                        <p><strong>Gallery:</strong> <a href="https://www.facebook.com/share/1GTPBK1Jr3/?mibextid=wwXlfr" target="_blank" style="color: #0070ba; text-decoration: none;">Follow us on Facebook</a></p>
+                    </div>
+
+                    <div class="portal-box">
+                        <p style="font-size: 0.75rem; color: #666;">Submit your information to secure your appointment on our design calendar.</p>
+                        <a href="https://www.paypal.com/ncp/payment/7C63RAGKBT7WW" class="paypal-btn">Reservation Request</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-grid">
+            <div class="card">
+                <h3>Aesthetic Curation</h3>
+                <p>Strategic color mapping and visual concept development tailored to harmonize with your home's unique lighting and architecture.</p>
+            </div>
+            <div class="card">
+                <h3>Cabinetry Design</h3>
+                <p>Specialized refinishing schematics and tonal selections to modernize kitchen and bathroom assets.</p>
+            </div>
+            <div class="card">
+                <h3>Interior Consulting</h3>
+                <p>Expert analysis of spatial flow and material interaction to curate a sophisticated, cohesive finish for every environment.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Maryland Posh Paints | Interior Design & Color Consultation</p>
+    </footer>
+
+</body>
+</html>
