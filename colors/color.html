@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherwin-Williams Professional Collection</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #2d3436;
+            --border-light: #eeeeee;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 20px;
+        }
+
+        .tab-link {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+
+        .tab-link.active {
+            color: var(--text-main);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .color-grid {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .color-grid.active {
+            display: grid;
+        }
+
+        .palette-card {
+            text-align: left;
+        }
+
+        .swatch {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 2px;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+
+        .brand {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .color-id {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .tabs-nav { gap: 5px; }
+            .tab-link { font-size: 0.75rem; padding: 5px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Curated Paint Collection</h1>
+        <p>A professional selection of Sherwin-Williams premium finishes.</p>
+    </header>
+
+    <nav class="tabs-nav">
+        <button class="tab-link active" onclick="openTone(event, 'whites')">Whites</button>
+        <button class="tab-link" onclick="openTone(event, 'neutrals')">Neutrals</button>
+        <button class="tab-link" onclick="openTone(event, 'greens')">Greens</button>
+        <button class="tab-link" onclick="openTone(event, 'blues')">Blues</button>
+        <button class="tab-link" onclick="openTone(event, 'reds')">Reds</button>
+        <button class="tab-link" onclick="openTone(event, 'purples')">Purples</button>
+        <button class="tab-link" onclick="openTone(event, 'yellows')">Yellows</button>
+    </nav>
+
+    <section id="whites" class="color-grid active">
+        <div class="palette-card"><div class="swatch" style="background-color: #f7f6f1;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Alabaster 7008</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #f2f3ef;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Pure White 7005</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #f2ede4;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Greek Villa 7551</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #ecece6;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Snowbound 7004</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #f0f0e7;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Extra White 7006</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #eeebe2;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Shoji White 7042</span></div></div>
+    </section>
+
+    <section id="neutrals" class="color-grid">
+        <div class="palette-card"><div class="swatch" style="background-color: #d1ccc0;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Agreeable Gray 7029</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #c7c1b5;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Repose Gray 7015</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #928b80;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Accessible Beige 7036</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #5d5c58;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Mindful Gray 7016</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #a49e93;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Balance Beige 7037</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #706d66;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Dovetail 7018</span></div></div>
+    </section>
+
+    <section id="greens" class="color-grid">
+        <div class="palette-card"><div class="swatch" style="background-color: #cdd2ca;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Sea Salt 6204</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #aeb1a3;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Sage 6175</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #555c4e;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Pewter Green 6208</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #8b9283;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Silver Strand 7057</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #d4d8cc;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Rainwashed 6211</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #4b5349;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Evergreen Fog 9130</span></div></div>
+    </section>
+
+    <section id="blues" class="color-grid">
+        <div class="palette-card"><div class="swatch" style="background-color: #2f394b;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Naval 6244</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #b7c0c7;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Upward 6239</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #506170;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Storm Cloud 6249</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #9ab0b9;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Rain 6219</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #3e505e;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Watery 6478</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #26313a;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">In The Navy 9178</span></div></div>
+    </section>
+
+    <section id="reds" class="color-grid">
+        <div class="palette-card"><div class="swatch" style="background-color: #832a2d;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Red Barn 7591</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #632d2b;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Rookwood Red 2802</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #7d3a3d;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Pomegranate 6601</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #a83f43;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Positive Red 6871</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #5d2b2c;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Burgundy 6300</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #924345;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Show Stopper 7588</span></div></div>
+    </section>
+
+    <section id="purples" class="color-grid">
+        <div class="palette-card"><div class="swatch" style="background-color: #8b8590;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Ormolu 6269</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #5e5663;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Beguiling Mauve 6262</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #a39ca8;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Mystical Shade 6276</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #4b4452;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Plum Brown 6265</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #d8d4db;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Breathless 6022</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #3b363d;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Blackberry 7577</span></div></div>
+    </section>
+
+    <section id="yellows" class="color-grid">
+        <div class="palette-card"><div class="swatch" style="background-color: #f6e6b4;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Cheerful 6902</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #f7e9c5;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Morning Sun 6672</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #dfc181;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Goldfinch 6905</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #e5cc96;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Bee 6683</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #f4d078;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Goldenrod 6677</span></div></div>
+        <div class="palette-card"><div class="swatch" style="background-color: #ebd6a0;"></div><div class="color-meta"><span class="brand">SW</span><span class="color-id">Moonraker 6672</span></div></div>
+    </section>
+
+</div>
+
+<script>
+    function openTone(evt, toneName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("color-grid");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByClassName("tab-link");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        document.getElementById(toneName).style.display = "grid";
+        document.getElementById(toneName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+
+</body>
+</html>
